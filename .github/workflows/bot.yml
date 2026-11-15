@@ -2,16 +2,16 @@ name: Bot IMAX
 
 on:
   schedule:
-    # Los horarios de GitHub están en UTC. Argentina = UTC-3.
-    # Cada 30 minutos durante todo el día
+    # Cada 30 minutos todo el día
     - cron: "0,30 * * * *"
-    # Cada 5 minutos de 23:30 a 00:30 (hora Argentina)
-    - cron: "30-55/5 2 * * *"
-    - cron: "0-30/5 3 * * *"
-    # Cada 5 minutos de 08:30 a 09:30 (hora Argentina)
-    - cron: "30-55/5 11 * * *"
-    - cron: "0-30/5 12 * * *"
-  # Permite ejecutarlo a mano con el botón "Run workflow"
+    # Cada 5 min de 22:30 a 01:30 (hora Argentina)
+    - cron: "30-55/5 1 * * *"
+    - cron: "*/5 2-3 * * *"
+    - cron: "0-30/5 4 * * *"
+    # Cada 5 min de 07:30 a 10:30 (hora Argentina)
+    - cron: "30-55/5 10 * * *"
+    - cron: "*/5 11-12 * * *"
+    - cron: "0-30/5 13 * * *"  # Permite ejecutarlo a mano con el botón "Run workflow"
   workflow_dispatch:
     inputs:
       prueba:
